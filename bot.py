@@ -3,6 +3,8 @@ import html
 import logging
 import os
 import re
+import threading
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CallbackQueryHandler, CommandHandler, ContextTypes
@@ -43,6 +45,28 @@ def read_env_value(name: str) -> str | None:
 
 
 BOT_TOKEN = os.getenv("BOT_TOKEN") or read_env_value("BOT_TOKEN")
+
+
+class HealthCheckHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.end_headers()
+        self.wfile.write(b"Telegram bot is running")
+
+    def log_message(self, format, *args):
+        return
+
+
+def start_health_server():
+    """Bind to Render's web-service port without blocking the Telegram bot."""
+    port = os.getenv("PORT")
+    if not port:
+        return
+
+    server = ThreadingHTTPServer(("0.0.0.0", int(port)), HealthCheckHandler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    logger.info("Health server listening on port %s", port)
 
 
 def malaysia_now() -> datetime.datetime:
@@ -310,6 +334,7 @@ def main():
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
+    start_health_server()
     logger.info("Bot starting...")
     app.run_polling()
 
