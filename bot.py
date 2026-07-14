@@ -28,7 +28,7 @@ MALAYSIA_TZ = datetime.timezone(datetime.timedelta(hours=8))
 
 
 def read_env_value(name: str) -> str | None:
-    """Read one value directly from .env without using os.getenv."""
+    """Read one value from the local .env file."""
     if not os.path.isfile(ENV_FILE):
         return None
     with open(ENV_FILE, encoding="utf-8") as env_file:
@@ -42,7 +42,7 @@ def read_env_value(name: str) -> str | None:
     return None
 
 
-BOT_TOKEN = read_env_value("BOT_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN") or read_env_value("BOT_TOKEN")
 
 
 def malaysia_now() -> datetime.datetime:
@@ -303,7 +303,9 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     if not BOT_TOKEN:
-        raise SystemExit("No BOT_TOKEN found. Add BOT_TOKEN=... to the .env file.")
+        raise SystemExit(
+            "No BOT_TOKEN found. Set it as an environment variable or add it to .env."
+        )
 
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
