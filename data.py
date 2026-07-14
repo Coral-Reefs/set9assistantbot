@@ -247,9 +247,14 @@ SUBJECTS = {
         "label": "🔬 Research Skills",
         "chapters": [
             {
-                "label": "C1 - (edit me in data.py)",
-                "type": "text",
-                "content": "Add Chapter 1 content, a link, or a file path here.",
+                "label": "W1 - Introduction",
+                "type": "file",
+                "content": "materials/research_skills/(W1) - INTRODUCTION.pdf",
+            },
+            {
+                "label": "W2 - Research Projects & Design",
+                "type": "file",
+                "content": "materials/research_skills/(W2) - RESEARCH PROJECTS & DESIGN.pdf",
             },
         ],
         "assignments": {
