@@ -130,10 +130,16 @@ SUBJECTS = {
                 "path": "materials/physics/Chapter 3; Motion in Two Dimensions.pdf",
             },
         ],
-        "assignments": {
-            "type": "text",
-            "content": "No assignments added yet.",
-        },
+        "assignments": [{
+                "label": "Tutorial Chapter 1",
+                "type": "file",
+                "path": "materials/physics/assignments/Tutorial Chapter 1.pdf",
+            },
+            {
+                "label": "Tutorial Chapter 2",
+                "type": "file",
+                "path": "materials/physics/assignments/Tutorial Chapter 2.pdf",
+            },]
     },
 
     "chemistry": {
@@ -160,6 +166,16 @@ SUBJECTS = {
                 "type": "file",
                 "path": "materials/chemistry/assignments/C1A/Topic 1A_notes_answer.pdf",
             },
+            {
+                "label": "Chapter 1B - Questions",
+                "type": "file",
+                "path": "materials/chemistry/assignments/C1B/Chapter 1B(Q).pdf",
+            },
+            # {
+            #     "label": "Chapter 1A - Answers",
+            #     "type": "file",
+            #     "path": "materials/chemistry/assignments/C1A/Topic 1A_notes_answer.pdf",
+            # },
         ],
     },
 
@@ -201,11 +217,17 @@ SUBJECTS = {
                 "type": "file",
                 "path": "materials/statistics/Ch_2_2.4_S.pdf",
             },
+            {
+                "label": "Chapter 2.5",
+                "type": "file",
+                "path": "materials/statistics/Ch_2_2.5_S.pdf",
+            },
         ],
-        "assignments": {
-            "type": "text",
-            "content": "No assignments added yet.",
-        },
+        "assignments": [{
+                "label": "Tutorial 2.4",
+                "type": "file",
+                "path": "materials/statistics/assignments/Tutorial 2.4.docx",
+            }],
     },
 
     "logical_reasoning": {
