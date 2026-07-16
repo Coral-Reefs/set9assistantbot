@@ -111,7 +111,7 @@ SUBJECTS = {
             {
                 "label": "Tutorial 1",
                 "type": "file",
-                "path": "materials/biology/assignments/tutorial 1/Tutorial 1 Bio 1 2627.pdf",
+                "path": "materials/biology/assignments/Tutorial 1 Bio 1 2627.pdf",
             },
             {
                 "label": "Tutorial 2",
