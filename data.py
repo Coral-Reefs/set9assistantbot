@@ -271,12 +271,17 @@ SUBJECTS = {
             {
                 "label": "W1 - Introduction",
                 "type": "file",
-                "content": "materials/research_skills/(W1) - INTRODUCTION.pdf",
+                "path": "materials/research_skills/(W1) - INTRODUCTION.pdf",
             },
             {
                 "label": "W2 - Research Projects & Design",
                 "type": "file",
-                "content": "materials/research_skills/(W2) - RESEARCH PROJECTS & DESIGN.pdf",
+                "path": "materials/research_skills/(W2) - RESEARCH PROJECTS & DESIGN.pdf",
+            },
+            {
+                "label": "W3 - The Heart of the Research Process",
+                "type": "file",
+                "path": "materials/research_skills/(W3) THE HEART OF RESEARCH PROCESS.pdf",
             },
         ],
         "assignments": {
