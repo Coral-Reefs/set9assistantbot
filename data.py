@@ -54,8 +54,8 @@ CLASS_SCHEDULE = {
         "9am - 11am  Chem Lab/Tutor (MK2) - Dr Prema",
         "11am - 1pm  Research Skills (BGP) - Ms Farah",
         "1pm - 2pm  Lunch",
-        "2pm - 3pm  Physics Lab/Tutor (MF1) - Dr Azah",
-        "3pm - 5pm  Bio Lab/Tutor (MB1) - Pn Nisa",
+        "2pm - 4pm  Physics Lab/Tutor (MF1) - Dr Azah",
+        "4pm - 6pm  Bio Lab/Tutor (MB1) - Pn Nisa",
     ],
     "fri": [
         "8am - 10am  Statistics (K4) - Ms Nadiah",
