@@ -107,10 +107,18 @@ SUBJECTS = {
                 "path": "materials/biology/Jadual Pengajaran.pdf",
             },
         ],
-        "assignments": {
-            "type": "text",
-            "content": "No assignments added yet.",
-        },
+        "assignments": [
+            {
+                "label": "Tutorial 1",
+                "type": "file",
+                "path": "materials/biology/assignments/tutorial 1/Tutorial 1 Bio 1 2627.pdf",
+            },
+            {
+                "label": "Tutorial 2",
+                "type": "file",
+                "path": "materials/biology/assignments/Tutorial 2_Transport into and out of the cell.pdf",
+            },
+        ]
     },
     "physics": {
         "label": "⚛️ Physics",
