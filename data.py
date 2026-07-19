@@ -13,9 +13,9 @@ DAY_LABELS = {
 # BUS SCHEDULE
 # ---------------------------------------------------------------
 BUS_SCHEDULE = {
-    "mon": "🚌 Monday Bus\nDepart: 8:00am\nReturn: 4:10pm",
+    "mon": "🚌 Monday Bus\nDepart: 10:00am\nReturn: 4:10pm",
     "tue": "🚌 Tuesday Bus\nDepart: 8:30am\nReturn: 4:40pm",
-    "wed": "🚌 Wednesday Bus\nDepart: 8:00am\nReturn: 4:10pm",
+    "wed": "🚌 Wednesday Bus\nDepart: 10:10am\nReturn: 4:10pm",
     "thu": "🚌 Thursday Bus\nDepart: 8:30am\nReturn: 6:10pm",
     "fri": (
         "🚌 Friday Bus\n"
@@ -308,7 +308,7 @@ SUBJECTS = {
             {
                 "label": "Jadual Tugasan",
                 "type": "file",
-                "path": "materials/jati_diri/JADUAL TUGASAN.pdf",
+                "path": "materials/jati_diri/JADUAL KERJA TUGASAN JATI DIRI 2026.docx",
             },
             {
                 "label": "Example Proposal Social Experiment",
