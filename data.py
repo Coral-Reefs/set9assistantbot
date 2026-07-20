@@ -39,13 +39,12 @@ CLASS_SCHEDULE = {
         "2pm - 4pm  Bio Lecture (AUDI)",
     ],
     "tue": [
-        "9am - 11am  Bio Lecture (AUDI)",
+        "9am - 11am  Statistics (K4) - Ms Nadiah",
         "11am - 1pm  Chem Lecture (AUDI)",
         "1pm - 2pm  Lunch",
         "2pm - 4pm  Physics Lecture (AUDI)",
     ],
     "wed": [
-        "9am - 11am  Statistics (MK1) - Ms Nadiah",
         "11am - 1pm  Logical Reasoning (K3) - Dr Mahirah",
         "1pm - 2pm  Lunch",
         "2pm - 3pm  LLA (MB1) - Ms Athirah",
@@ -229,6 +228,21 @@ SUBJECTS = {
                 "label": "Chapter 2.5",
                 "type": "file",
                 "path": "materials/statistics/Ch_2_2.5_S.pdf",
+            },
+            {
+                "label": "Chapter 3.1",
+                "type": "file",
+                "path": "materials/statistics/Ch_3_3.1_S.pdf",
+            },
+            {
+                "label": "Chapter 3.2",
+                "type": "file",
+                "path": "materials/statistics/Ch_3_3.2_S.pdf",
+            },
+            {
+                "label": "Chapter 3.3",
+                "type": "file",
+                "path": "materials/statistics/Ch_3_3.3_S.pdf",
             },
         ],
         "assignments": [{
