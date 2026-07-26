@@ -34,9 +34,9 @@ BUS_SCHEDULE = {
 CLASS_SCHEDULE = {
     "mon": [
         "9am-11am  Chem Lecture (AUDI)",
-        "11am - 1pm  Bio Lecture (AUDI)",
+        "11am - 1pm  Physics Lecture (AUDI)",
         "1pm - 2pm  Lunch",
-        "2pm - 4pm  Physics Lecture (AUDI)",
+        "2pm - 4pm  Bio Lecture (AUDI)",
     ],
     "tue": [
         "9am - 11am  Bio Lecture (AUDI)",
