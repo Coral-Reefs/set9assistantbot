@@ -34,17 +34,18 @@ BUS_SCHEDULE = {
 CLASS_SCHEDULE = {
     "mon": [
         "9am-11am  Chem Lecture (AUDI)",
-        "11am - 1pm  Physics Lecture (AUDI)",
+        "11am - 1pm  Bio Lecture (AUDI)",
         "1pm - 2pm  Lunch",
-        "2pm - 4pm  Bio Lecture (AUDI)",
+        "2pm - 4pm  Physics Lecture (AUDI)",
     ],
     "tue": [
-        "9am - 11am  Statistics (K4) - Ms Nadiah",
+        "9am - 11am  Bio Lecture (AUDI)",
         "11am - 1pm  Chem Lecture (AUDI)",
         "1pm - 2pm  Lunch",
         "2pm - 4pm  Physics Lecture (AUDI)",
     ],
     "wed": [
+        "9am - 11am  Statistics (K4) - Ms Nadiah",
         "11am - 1pm  Logical Reasoning (K3) - Dr Mahirah",
         "1pm - 2pm  Lunch",
         "2pm - 3pm  LLA (MB1) - Ms Athirah",
@@ -62,24 +63,6 @@ CLASS_SCHEDULE = {
         "2pm - 4pm  Jati Diri (AUDI)",
     ],
 }
-
-# ---------------------------------------------------------------
-# SUBJECTS
-# ---------------------------------------------------------------
-# Each subject has:
-#   label:       button text shown to students
-#   chapters:    list of chapters/materials. Each chapter is one of:
-#                 - {"label": "...", "type": "file", "path": "materials/xxx/yyy.pdf"}
-#                     -> bot sends the file at that path
-#                 - {"label": "...", "type": "link", "url": "https://..."}
-#                     -> bot sends a clickable link
-#                 - {"label": "...", "type": "text", "content": "..."}
-#                     -> bot sends plain text (e.g. a quick note)
-#   assignments: same three types, shown when "Assignments" is tapped
-#
-# TO ADD SLIDES: drop the file into the matching materials/<subject>/
-# folder and set "path" to "materials/<subject>/<filename>".
-# ---------------------------------------------------------------
 
 SUBJECTS = {
     "biology": {
