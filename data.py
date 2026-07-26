@@ -99,6 +99,10 @@ SUBJECTS = {
                 "label": "C2 - The Cell",
                 "type": "file",
                 "path": "materials/biology/CHAPTER 2 THE CELL.pdf",
+            },{
+                "label": "C3 - Cellular Respiration",
+                "type": "file",
+                "path": "materials/biology/CHAPTER 3 Cellular Respiration.pdf",
             },
             {
                 "label": "📆 Jadual Pengajaran",
