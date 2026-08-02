@@ -13,14 +13,14 @@ DAY_LABELS = {
 # BUS SCHEDULE
 # ---------------------------------------------------------------
 BUS_SCHEDULE = {
-    "mon": "🚌 Monday Bus\nDepart: 8:30am\nReturn: 5:10pm\nKuliah Mahgrib: 6:45pm\nKuliah Mahgrib Return: 9:30pm",
+    "mon": "🚌 Monday Bus\nDepart: 8:30am\nReturn: 4:10pm\nKuliah Mahgrib: 6:45pm\nKuliah Mahgrib Return: 9:30pm",
     "tue": "🚌 Tuesday Bus\nDepart: 8:00am\nReturn: 4:40pm",
-    "wed": "🚌 Wednesday Bus\nDepart: 8:30am\nReturn: 4:10pm",
+    "wed": "🚌 Wednesday Bus\nDepart: 10:10am\nReturn: 4:10pm",
     "thu": "🚌 Thursday Bus\nDepart: 8:30am\nReturn: 6:10pm",
     "fri": (
         "🚌 Friday Bus\n"
         "Depart: 7:30am\n"
-        "Return: 10:10am\n"
+        "Return: 11:10am\n"
         "Depart (again): 2:30pm\n"
         "Return: 5:00pm"
     ),
@@ -33,7 +33,7 @@ BUS_SCHEDULE = {
 # ---------------------------------------------------------------
 CLASS_SCHEDULE = {
     "mon": [
-        "9am-11am  Chem Lecture (AUDI)",
+        "9am - 11am  Chem Lecture (AUDI)",
         "11am - 1pm  Physics Lecture (AUDI)",
         "1pm - 2pm  Lunch",
         "2pm - 4pm  Bio Lecture (AUDI)",
@@ -45,7 +45,7 @@ CLASS_SCHEDULE = {
         "2pm - 4pm  Physics Lecture (AUDI)",
     ],
     "wed": [
-        "9am - 11am  Statistics (K4) - Ms Nadiah",
+        # "9am - 11am  Statistics (K4) - Ms Nadiah",
         "11am - 1pm  Logical Reasoning (K3) - Dr Mahirah",
         "1pm - 2pm  Lunch",
         "2pm - 3pm  LLA (MB1) - Ms Athirah",
@@ -88,6 +88,11 @@ SUBJECTS = {
                 "path": "materials/biology/CHAPTER 3 Cellular Respiration.pdf",
             },
             {
+                "label": "📑 Lab Report Format",
+                "type": "file",
+                "path": "materials/biology/LAB REPORT BIOLOGY FORMAT.pdf",
+            },
+            {
                 "label": "📆 Jadual Pengajaran",
                 "type": "file",
                 "path": "materials/biology/Jadual Pengajaran.pdf",
@@ -122,6 +127,11 @@ SUBJECTS = {
                 "label": "C3 - Motion in Two Dimensions",
                 "type": "file",
                 "path": "materials/physics/Chapter 3; Motion in Two Dimensions.pdf",
+            },
+            {
+                "label": "C4 - Dynamics Newton's Laws of Motion",
+                "type": "file",
+                "path": "materials/physics/Chapter 4; Dynamics Newton's Laws of Motion.pdf",
             },
         ],
         "assignments": [{
@@ -241,7 +251,12 @@ SUBJECTS = {
                 "label": "Tutorial 2.4",
                 "type": "file",
                 "path": "materials/statistics/assignments/Tutorial 2.4.docx",
-            }],
+            },
+            {
+                "label": "ASSIGNMENT 1 (14 Aug 4pm)",
+                "type": "file",
+                "path": "materials/statistics/assignments/ASSIGNMENT 1.pdf",
+            },],
     },
 
     "logical_reasoning": {
@@ -258,10 +273,12 @@ SUBJECTS = {
                 "path": "materials/logical_reasoning/Course Introduction.pdf",
             },
         ],
-        "assignments": {
-            "type": "text",
-            "content": "No assignments added yet.",
-        },
+        "assignments": [
+            {
+                "label": "ASSIGNMENT 1 (14 Aug 5pm)",
+                "type": "file",
+                "path": "materials/statistics/assignments/ASSIGNMENT 1.pdf",
+            },],
     },
 
     "lla": {
