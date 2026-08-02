@@ -13,7 +13,7 @@ DAY_LABELS = {
 # BUS SCHEDULE
 # ---------------------------------------------------------------
 BUS_SCHEDULE = {
-    "mon": "🚌 Monday Bus\nDepart: 8:30am\nReturn: 4:10pm\nKuliah Mahgrib: 6:45pm\nKuliah Mahgrib Return: 9:30pm",
+    "mon": "🚌 Monday Bus\nDepart: 8:30am\nReturn: 4:10pm",
     "tue": "🚌 Tuesday Bus\nDepart: 8:00am\nReturn: 4:40pm",
     "wed": "🚌 Wednesday Bus\nDepart: 10:10am\nReturn: 4:10pm",
     "thu": "🚌 Thursday Bus\nDepart: 8:30am\nReturn: 6:10pm",
