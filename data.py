@@ -256,6 +256,46 @@ SUBJECTS = {
                 "type": "file",
                 "path": "materials/statistics/Ch_3_3.3_S.pdf",
             },
+            {
+                "label": "Chapter 4.1",
+                "type": "file",
+                "path": "materials/statistics/Ch_4_4.1_S.pdf",
+            },
+            {
+                "label": "Chapter 4.2",
+                "type": "file",
+                "path": "materials/statistics/Ch_4_4.2_S.pdf",
+            },
+            {
+                "label": "Chapter 4.3",
+                "type": "file",
+                "path": "materials/statistics/Ch_4_4.3_S.pdf",
+            },
+            {
+                "label": "Chapter 5.1",
+                "type": "file",
+                "path": "materials/statistics/Ch_5_5.1_S.pdf",
+            },
+            {
+                "label": "Chapter 5.2",
+                "type": "file",
+                "path": "materials/statistics/Ch_5_5.2_S.pdf",
+            },
+            {
+                "label": "Chapter 5.3",
+                "type": "file",
+                "path": "materials/statistics/Ch_5_5.3_S.pdf",
+            },
+            {
+                "label": "Chapter 5.4",
+                "type": "file",
+                "path": "materials/statistics/Ch_5_5.4_S.pdf",
+            },
+            {
+                "label": "Normal Distribution Table",
+                "type": "file",
+                "path": "materials/statistics/Table 4—Standard Normal Distribution.pdf",
+            },
         ],
         "assignments": [{
                 "label": "Tutorial 2.4",
@@ -287,7 +327,7 @@ SUBJECTS = {
             {
                 "label": "ASSIGNMENT 1 (14 Aug 5pm)",
                 "type": "file",
-                "path": "materials/statistics/assignments/ASSIGNMENT 1.pdf",
+                "path": "materials/logical_reasoning/assignments/ASSIGNMENT 1.pdf",
             },],
     },
 
