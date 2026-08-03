@@ -153,6 +153,11 @@ SUBJECTS = {
                 "label": "Tutorial Chapter 3",
                 "type": "file",
                 "path": "materials/physics/assignments/Tutorial Chapter 3.pdf",
+            },
+            {
+                "label": "Tutorial Chapter 4",
+                "type": "file",
+                "path": "materials/physics/assignments/Tutorial Chapter 4.pdf",
             },]
     },
 
