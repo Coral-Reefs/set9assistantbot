@@ -133,6 +133,11 @@ SUBJECTS = {
                 "type": "file",
                 "path": "materials/physics/Chapter 4; Dynamics Newton's Laws of Motion.pdf",
             },
+            {
+                "label": "C5 - Work and Energy",
+                "type": "file",
+                "path": "materials/physics/Chapter 5; Work and Energy.pdf",
+            },
         ],
         "assignments": [{
                 "label": "Tutorial Chapter 1",
