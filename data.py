@@ -327,7 +327,7 @@ SUBJECTS = {
             {
                 "label": "ASSIGNMENT 1 (14 Aug 5pm)",
                 "type": "file",
-                "path": "materials/logical_reasoning/assignments/ASSIGNMENT 1.pdf",
+                "path": "materials/logical_reasoning/assignments/-FINAL- ASSIGNMENT 1 20262027.pdf",
             },],
     },
 
