@@ -88,6 +88,15 @@ SUBJECTS = {
                 "path": "materials/biology/CHAPTER 3 Cellular Respiration.pdf",
             },
             {
+                "label": "C4 - Photosynthesis",
+                "type": "file",
+                "path": "materials/biology/CHAPTER 4 Photosynthesis.pdf",
+            },{
+                "label": "C5.1 - Plant Anatomy and Physiology",
+                "type": "file",
+                "path": "materials/biology/CHAPTER 5.1 Plant Anatomy and Physiology.pdf",
+            },
+            {
                 "label": "📑 Lab Report Format",
                 "type": "file",
                 "path": "materials/biology/LAB REPORT BIOLOGY FORMAT.pdf",
