@@ -405,10 +405,16 @@ SUBJECTS = {
                 "path": "materials/research_skills/(W3) THE HEART OF RESEARCH PROCESS.pdf",
             },
         ],
-        "assignments": {
-            "type": "text",
-            "content": "No assignments added yet.",
-        },
+        "assignments": [{
+                "label": "Assignment 1 (6 Aug)",
+                "type": "file",
+                "path": "materials/physics/assignments/Tutorial Chapter 1.pdf",
+            },{
+                "label": "Assignment 2 (2 Sept)",
+                "type": "file",
+                "path": "materials/physics/assignments/Tutorial Chapter 1.pdf",
+            },
+        ],
     },
     "jati_diri": {
         "label": "🌱 Jati Diri",
