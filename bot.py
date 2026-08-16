@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MATERIALS_DIR = os.path.join(BASE_DIR, "materials")
 ENV_FILE = os.path.join(BASE_DIR, ".env")
 MALAYSIA_TZ = datetime.timezone(datetime.timedelta(hours=8))
-STUDY_REMINDER_INTERVAL = 60
+STUDY_REMINDER_INTERVAL = 1
 study_tasks: dict[tuple[int, int], asyncio.Task] = {}
 
 
@@ -265,7 +265,7 @@ async def run_study_reminder(
     key: tuple[int, int],
     target: datetime.datetime,
 ):
-    """Wait until the requested time, then remind once per minute."""
+    """Wait until the requested time, then remind once per second."""
     chat_id, _ = key
     try:
         delay = max(0, (target - malaysia_now()).total_seconds())
@@ -273,7 +273,7 @@ async def run_study_reminder(
         while True:
             await context.bot.send_message(
                 chat_id=chat_id,
-                text="📚 Study time! Send /stop to stop these reminders.",
+                text="go study!!! (/stop to stop)",
             )
             await asyncio.sleep(STUDY_REMINDER_INTERVAL)
     except asyncio.CancelledError:
@@ -311,7 +311,7 @@ async def study_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.effective_message.reply_text(
         "Study reminder set for "
         f"{target.strftime('%A, %d %B at %I:%M %p')} (Malaysia time).\n"
-        "At that time, I'll remind you every minute until you send /stop."
+        "At that time, I'll remind you every second until you send /stop."
     )
 
 
