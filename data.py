@@ -13,17 +13,22 @@ DAY_LABELS = {
 # BUS SCHEDULE
 # ---------------------------------------------------------------
 BUS_SCHEDULE = {
-    "mon": "🚌 Monday Bus\nDepart: 8:30am\nReturn: 4:10pm",
-    "tue": "🚌 Tuesday Bus\nDepart: 8:00am\nReturn: 4:40pm",
-    "wed": "🚌 Wednesday Bus\nDepart: 10:10am\nReturn: 4:10pm",
-    "thu": "🚌 Thursday Bus\nDepart: 8:30am\nReturn: 6:10pm",
-    "fri": (
-        "🚌 Friday Bus\n"
-        "Depart: 7:30am\n"
-        "Return: 11:10am\n"
-        "Depart (again): 2:30pm\n"
-        "Return: 5:00pm"
-    ),
+    "mon": "no bus! happy studying! 🏠",
+    "tue": "no bus! happy studying! 🏠",
+    "wed": "no bus! happy studying! 🏠",
+    "thu": "no bus! happy studying! 🏠",
+    "fri": "no bus! happy studying! 🏠"
+    # "mon": "🚌 Monday Bus\nDepart: 8:30am\nReturn: 4:10pm",
+    # "tue": "🚌 Tuesday Bus\nDepart: 8:00am\nReturn: 4:40pm",
+    # "wed": "🚌 Wednesday Bus\nDepart: 10:10am\nReturn: 4:10pm",
+    # "thu": "🚌 Thursday Bus\nDepart: 8:30am\nReturn: 6:10pm",
+    # "fri": (
+    #     "🚌 Friday Bus\n"
+    #     "Depart: 7:30am\n"
+    #     "Return: 11:10am\n"
+    #     "Depart (again): 2:30pm\n"
+    #     "Return: 5:00pm"
+    # ),
 }
 
 # ---------------------------------------------------------------
@@ -31,37 +36,51 @@ BUS_SCHEDULE = {
 # NOTE: double-check these times against the original photo -
 # some block boundaries were estimated where the image was unclear.
 # ---------------------------------------------------------------
-CLASS_SCHEDULE = {
-    "mon": [
-        "9am - 11am  Chem Lecture (AUDI)",
-        "11am - 1pm  Physics Lecture (AUDI)",
-        "1pm - 2pm  Lunch",
-        "2pm - 4pm  Bio Lecture (AUDI)",
+CLASS_SCHEDULE = {"mon": [
+        "no classes! happy studying! 🏠"
     ],
     "tue": [
-        "9am - 11am  Bio Lecture (AUDI)",
-        "11am - 1pm  Chem Lecture (AUDI)",
-        "1pm - 2pm  Lunch",
-        "2pm - 4pm  Physics Lecture (AUDI)",
+        "no classes! happy studying! 🏠"
     ],
     "wed": [
-        # "9am - 11am  Statistics (K4) - Ms Nadiah",
-        "11am - 1pm  Logical Reasoning (K3) - Dr Mahirah",
-        "1pm - 2pm  Lunch",
-        "2pm - 3pm  LLA (MB1) - Ms Athirah",
+        "no classes! happy studying! 🏠",
     ],
     "thu": [
-        "9am - 11am  Chem Lab/Tutor (MK2) - Dr Prema",
-        "11am - 1pm  Research Skills (BGP) - Ms Farah",
-        "1pm - 2pm  Lunch",
-        "2pm - 4pm  Physics Lab/Tutor (MF1) - Dr Azah",
-        "4pm - 6pm  Bio Lab/Tutor (MB1) - Pn Nisa",
+        "no classes! happy studying! 🏠",
     ],
     "fri": [
-        "8am - 10am  Statistics (K4) - Ms Nadiah",
-        "10am - 11am  Logical Reasoning (K3)",
-        "2pm - 4pm  Jati Diri (AUDI)",
+        "no classes! happy studying! 🏠",
     ],
+    # "mon": [
+    #     "9am - 11am  Chem Lecture (AUDI)",
+    #     "11am - 1pm  Physics Lecture (AUDI)",
+    #     "1pm - 2pm  Lunch",
+    #     "2pm - 4pm  Bio Lecture (AUDI)",
+    # ],
+    # "tue": [
+    #     "9am - 11am  Bio Lecture (AUDI)",
+    #     "11am - 1pm  Chem Lecture (AUDI)",
+    #     "1pm - 2pm  Lunch",
+    #     "2pm - 4pm  Physics Lecture (AUDI)",
+    # ],
+    # "wed": [
+    #     "9am - 11am  Statistics (K4) - Ms Nadiah",
+    #     "11am - 1pm  Logical Reasoning (K3) - Dr Mahirah",
+    #     "1pm - 2pm  Lunch",
+    #     "2pm - 3pm  LLA (MB1) - Ms Athirah",
+    # ],
+    # "thu": [
+    #     "9am - 11am  Chem Lab/Tutor (MK2) - Dr Prema",
+    #     "11am - 1pm  Research Skills (BGP) - Ms Farah",
+    #     "1pm - 2pm  Lunch",
+    #     "2pm - 4pm  Physics Lab/Tutor (MF1) - Dr Azah",
+    #     "4pm - 6pm  Bio Lab/Tutor (MB1) - Pn Nisa",
+    # ],
+    # "fri": [
+    #     "8am - 10am  Statistics (K4) - Ms Nadiah",
+    #     "10am - 11am  Logical Reasoning (K3)",
+    #     "2pm - 4pm  Jati Diri (AUDI)",
+    # ],
 }
 
 SUBJECTS = {
