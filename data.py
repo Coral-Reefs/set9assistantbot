@@ -181,6 +181,14 @@ SUBJECTS = {
                 "label": "1B - QUANTUM THEORY",
                 "type": "file",
                 "path": "materials/chemistry/CHAPTER 1B QUANTUM THEORY.pdf",
+            },{
+                "label": "2 - PERIODIC TABLE",
+                "type": "file",
+                "path": "materials/chemistry/CHAPTER 2 PERIODIC TABLE.pdf",
+            },{
+                "label": "3 - CHEMICAL FORMULAE AND EQUATION",
+                "type": "file",
+                "path": "materials/chemistry/CHAPTER 3 CHEMICAL FORMULAE AND EQUATION.pdf",
             },
         ],
         "assignments": [
@@ -315,6 +323,10 @@ SUBJECTS = {
                 "label": "ASSIGNMENT 1 (14 Aug 4pm)",
                 "type": "file",
                 "path": "materials/statistics/assignments/ASSIGNMENT 1.pdf",
+            },{
+                "label": "Tutorial 5.4 5.5",
+                "type": "file",
+                "path": "materials/statistics/assignments/Tutorial_5.4_5.5.pdf",
             },],
     },
 
