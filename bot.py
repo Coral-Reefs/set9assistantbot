@@ -1,3 +1,4 @@
+import asyncio
 import datetime
 import html
 import logging
@@ -27,6 +28,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MATERIALS_DIR = os.path.join(BASE_DIR, "materials")
 ENV_FILE = os.path.join(BASE_DIR, ".env")
 MALAYSIA_TZ = datetime.timezone(datetime.timedelta(hours=8))
+STUDY_REMINDER_INTERVAL = 60
+study_tasks: dict[tuple[int, int], asyncio.Task] = {}
 
 
 def read_env_value(name: str) -> str | None:
@@ -82,6 +85,30 @@ def today_key() -> str:
     """Return mon..fri, falling back to Monday on weekends."""
     weekday = malaysia_now().weekday()
     return DAYS[weekday] if weekday <= 4 else "mon"
+
+
+def parse_study_time(value: str) -> datetime.time | None:
+    """Accept times such as 21:30, 9:30pm, or 9pm."""
+    normalized = value.strip().replace(" ", "").upper()
+    for time_format in ("%H:%M", "%I:%M%p", "%I%p"):
+        try:
+            return datetime.datetime.strptime(normalized, time_format).time()
+        except ValueError:
+            continue
+    return None
+
+
+def next_study_datetime(
+    requested_time: datetime.time,
+    now: datetime.datetime | None = None,
+) -> datetime.datetime:
+    """Return the next occurrence of a Malaysia-time clock time."""
+    now = now or malaysia_now()
+    target = datetime.datetime.combine(now.date(), requested_time, MALAYSIA_TZ)
+    current_minute = now.replace(second=0, microsecond=0)
+    if target < current_minute:
+        target += datetime.timedelta(days=1)
+    return target
 
 
 def format_class_schedule(
@@ -233,6 +260,72 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
+async def run_study_reminder(
+    context: ContextTypes.DEFAULT_TYPE,
+    key: tuple[int, int],
+    target: datetime.datetime,
+):
+    """Wait until the requested time, then remind once per minute."""
+    chat_id, _ = key
+    try:
+        delay = max(0, (target - malaysia_now()).total_seconds())
+        await asyncio.sleep(delay)
+        while True:
+            await context.bot.send_message(
+                chat_id=chat_id,
+                text="📚 Study time! Send /stop to stop these reminders.",
+            )
+            await asyncio.sleep(STUDY_REMINDER_INTERVAL)
+    except asyncio.CancelledError:
+        raise
+    except Exception:
+        logger.exception("Study reminder failed for chat %s", chat_id)
+    finally:
+        if study_tasks.get(key) is asyncio.current_task():
+            study_tasks.pop(key, None)
+
+
+async def study_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Schedule repeated study reminders with /study <time>."""
+    if not context.args:
+        await update.effective_message.reply_text(
+            "Usage: /study <time>\nExamples: /study 21:30 or /study 9:30pm"
+        )
+        return
+
+    requested_time = parse_study_time("".join(context.args))
+    if requested_time is None:
+        await update.effective_message.reply_text(
+            "I couldn't read that time. Try /study 21:30 or /study 9:30pm."
+        )
+        return
+
+    key = (update.effective_chat.id, update.effective_user.id)
+    previous_task = study_tasks.pop(key, None)
+    if previous_task:
+        previous_task.cancel()
+
+    target = next_study_datetime(requested_time)
+    task = asyncio.create_task(run_study_reminder(context, key, target))
+    study_tasks[key] = task
+    await update.effective_message.reply_text(
+        "Study reminder set for "
+        f"{target.strftime('%A, %d %B at %I:%M %p')} (Malaysia time).\n"
+        "At that time, I'll remind you every minute until you send /stop."
+    )
+
+
+async def stop_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Stop this user's pending or active study reminder."""
+    key = (update.effective_chat.id, update.effective_user.id)
+    task = study_tasks.pop(key, None)
+    if task:
+        task.cancel()
+        await update.effective_message.reply_text("Study reminders stopped.")
+    else:
+        await update.effective_message.reply_text("You have no active study reminder.")
+
+
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -338,6 +431,8 @@ def main():
 
     app = Application.builder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("study", study_command))
+    app.add_handler(CommandHandler("stop", stop_command))
     app.add_handler(CallbackQueryHandler(button_handler))
     start_health_server()
     logger.info("Bot starting...")
