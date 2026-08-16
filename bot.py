@@ -310,8 +310,7 @@ async def study_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     study_tasks[key] = task
     await update.effective_message.reply_text(
         "Study reminder set for "
-        f"{target.strftime('%A, %d %B at %I:%M %p')} (Malaysia time).\n"
-        "At that time, I'll remind you every second until you send /stop."
+        f"{target.strftime('%A %I:%M %p')}.\n"
     )
 
 
